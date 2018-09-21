@@ -62,6 +62,8 @@ app.post('/', urlencodedParser,function(req,res){
 	if(result[i]['Username']==response['Username']&&result[i]['Password']==response['Password'])
 		{
 			console.log('Logged in');
+			res.sendFile(__dirname + "/" +"main.html");
+			break;
 		}
 	}
   	});
